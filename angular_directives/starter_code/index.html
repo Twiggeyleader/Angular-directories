@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Intro to Angular JS!</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<script src="js/angular.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controller.js"></script>
+		
+	</head>
+	<body ng-app="app">
+	{{2 + 2}}
+	{{50 *2 / 4}}
+	<h2>Cheeks underboat</h2>
+
+	<div ng-controller="MainController as main">
+		<h1>{{main.test}} </h1>
+		<button ng-click="main.helloWorld()">Click me!</button>
+		<button ng-click= "main.love()">I Love Bill Murray</button>
+		<button ng-click= "main.hate()">I HATE BILL MURRAY</button>
+		<img ng-show="main.loveBillMurray" src="http://fillmurray.com/g/300/300">
+	</div>
+	</body>
+</html>
