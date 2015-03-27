@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html ng-app="kittiesApp">
+	<head>
+
+		<title>Kitties App!</title>
+		<link rel="stylesheet" href="css/style.css">
+
+		
+
+	</head>
+
+	<body>
+
+		<div id="container" ng-controller="KittiesController as cats">
+			<div class="left-container">
+					<h1>Kitties for Adoption</h1>
+					<div class="dashed" ng-repeat="c in cats.listOfKitties | filter: false">
+						<h2>My name is {{ c.catName }}</h2>
+						<p> I am {{c.catName}}</p>
+						<p>I am {{c.gender}}</p>
+						<img ng-src={{c.image}}>
+						<p>Adopt?<input type="checkbox" ng-model="c.adopted"></p>
+					</div>
+			</div>
+
+			<div class="right-container">
+					<h1> At their forever homes!</h1>
+					<div class="dashed" ng-repeat="c in cats.listOfKitties | filter: true">
+						<h2>My name is {{ c.catName }}</h2>
+						<p> I am {{c.catName}}</p>
+						<p>I am {{c.gender}}</p>
+						<img ng-src={{c.image}}>
+					</div>
+			</div>
+		</div>
+
+    		<!--Sourcing Angular-->		
+    		<script type="text/javascript" charset="utf-8" src="js/angular.min.js"></script>
+		<!-- Source in module -->
+			<script type="text/javascript" src="js/main.js"></script>
+		<!-- Source in controller -->
+			<script type="text/javascript" src="js/KittiesController.js"></script>
+	</body>
+</html>

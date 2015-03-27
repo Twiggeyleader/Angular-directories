@@ -1,0 +1,32 @@
+@import url(http://fonts.googleapis.com/css?family=Playball);
+
+body {
+	background-image: url('../images/background.png');
+	text-align: center;
+	width: 100%;
+	font-family: 'Playball', cursive;
+}
+
+#container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.dashed {
+	
+	border: 2px dashed blue;
+	border-radius: 20px;
+	margin: 10px;
+	padding: 10px;
+}
+
+.left-container, .right-container {
+	border: 2px solid yellow;
+	background-color: white;
+	float: left;
+	width: 440px;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 20px;
+}
+
